@@ -8,16 +8,23 @@ export default function Metal ({atomNum, name, symbol, background, row, column, 
     let colFrom = 'col-'+column;
     let colTo = 'col-'+(column+1);
     let atmMass = atomicMass.toFixed(2);
+    function showDetails (id:any) {
+        let currentMetal:any = document.querySelector(`#metal-${id}`);
+        currentMetal.style.display = 'block';
+    }
     return (
         <>
+            <Details id={atomNum} name={name}/>
             <div className="metal" style={{
                 background: backgroundColor,
                 gridRowStart: rowFrom,
                 gridRowEnd: rowTo,
                 gridColumnStart: colFrom,
                 gridColumnEnd: colTo,
+                
             }}>
                 <a
+                    onClick={()=>showDetails(atomNum)}
                     data-tooltip-id="my-tooltip"
                     data-tooltip-place="top"
                     data-tooltip-delay-show={500}
@@ -39,7 +46,6 @@ export default function Metal ({atomNum, name, symbol, background, row, column, 
                     <h3>{symbol}</h3>
                     <p className='name'>{name}</p>
                 </a>
-                <Details/>
             </div>
             <Tooltip id="my-tooltip" 
                 style={{ 

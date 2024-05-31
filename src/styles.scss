@@ -49,4 +49,61 @@ body {
             }
         }
     }
+    .details {
+        color: #fff;
+        font-family: 'Outfit', sans-serif;
+        display: none;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            opacity: 0.4;
+            z-index: 9; 
+        }
+        .metal-details {
+            position: absolute;
+            z-index: 10;
+            top: 20%;
+            left: calc(50% - 760px);
+            width: 80%;
+            height: auto;
+            background: white;
+            color: black;
+            border: 1px solid #000;
+            border-radius: 10px;
+            padding: 10px 20px;
+            .metal-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                img {
+                    width: 15px;    
+                }
+            }
+            .metal-body {
+                display: flex;
+                .left-side {
+                    flex-basis: 0;
+                    flex-grow: 2;
+                }
+                .right-side {
+                    flex-basis: 0;
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    img {
+                        max-width: 200px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
 }
