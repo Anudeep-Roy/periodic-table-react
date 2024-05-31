@@ -1,5 +1,6 @@
 import data from '../elements.json';
 import Metal from './metal';
+import Modal from './modal';
 
 export default function TableRow () {
     return (
@@ -7,6 +8,7 @@ export default function TableRow () {
             {data.map((element, i)=>(
                 <Metal atomNum={i+1} name={element.name} symbol={element.symbol} background={element['cpk-hex']} row={element.period} column={element.group} standardState={element.category} atomicMass={element.atomic_mass}  boilingPoint={element.boil} description={element.summary}/>
             ))}
+            <Modal/>
         </div>
     )
 }
