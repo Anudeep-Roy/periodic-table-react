@@ -1,0 +1,52 @@
+body {
+    background-image: url('../public/chem.jpg');
+    background-size: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    width: 75%;
+    margin: 0 auto;
+    h1 {
+        color: #fff;
+        text-align: center;
+        background: purple;
+        margin: 0;
+        padding: 10px 0;
+        border-radius: 0 0 10px 10px;
+    }
+}
+.table-row {
+    margin: 50px 0 0;
+    display: grid;
+    grid-template-columns: [col-1] auto [col-2] auto [col-3] auto [col-4] auto [col-5] auto [col-6] auto [col-7] auto [col-8] auto [col-9] auto [col-10] auto [col-11] auto [col-12] auto [col-13] auto [col-14] auto [col-15] auto [col-16] auto [col-17] auto [col-18] auto [col-19];
+    grid-template-rows: [row-1] auto [row-2] auto [row-3] auto [row-4] auto [row-5] auto [row-6] auto [row-7] auto [row-8];
+    .metal {
+        transition: 0.5s;
+        max-width: 100%;
+        text-align: center;
+        border: 1px solid;
+        padding: 5px;
+        &:hover {
+            transform: scale(1.5);
+            cursor: pointer;
+            z-index: 10;
+            opacity: 1;
+        }
+        .info {
+            display: flex;
+            justify-content: space-between;
+        }
+        h3 {
+            font-size: 15px;
+            margin: 0;
+        }
+        p {
+            font-size: 10px;
+            &.name {
+                font-size: 12px;
+            }
+        }
+    }
+}
